@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Quit">
+          <items>
+            <MenuItem fx:id="quitButton" mnemonicParsing="false" onAction="#quitExecution" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Books">
+          <items>
+            <MenuItem fx:id="bookListButton" mnemonicParsing="false" onAction="#viewBookList" text="Book List" />
+                  <MenuItem fx:id="addBookButton" mnemonicParsing="false" onAction="#viewAddBook" text="Add Book" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Sheets">
+               <items>
+                  <MenuItem fx:id="openSheetViewButton" mnemonicParsing="false" onAction="#viewSheetView" text="Generate Publisher Spreadsheet" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+      <BorderPane fx:id="contentPane" prefHeight="384.0" prefWidth="640.0" />
+  </children>
+</VBox>

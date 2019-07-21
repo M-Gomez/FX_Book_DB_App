@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="searchBar" onAction="#onSearch" prefHeight="25.0" prefWidth="253.0" />
+                  <Button mnemonicParsing="false" onAction="#onSearch" text="Search" />
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <ListView fx:id="listView" editable="true" prefHeight="455.0" prefWidth="790.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="3.0" />
+               </VBox.margin>
+            </ListView>
+            <HBox prefHeight="56.0" prefWidth="800.0">
+               <children>
+                  <ButtonBar prefHeight="56.0" prefWidth="542.0">
+                    <buttons>
+                        <Button fx:id="first" mnemonicParsing="false" onAction="#repopulateList" prefHeight="35.0" prefWidth="100.0" text="First" translateX="-10.0" />
+                        <Button fx:id="prev" mnemonicParsing="false" onAction="#repopulateList" prefHeight="35.0" prefWidth="100.0" text="Prev" translateX="-10.0" />
+                        <Button fx:id="next" mnemonicParsing="false" onAction="#repopulateList" prefHeight="35.0" prefWidth="100.0" text="Next" translateX="-10.0" />
+                        <Button fx:id="last" mnemonicParsing="false" onAction="#repopulateList" prefHeight="35.0" prefWidth="100.0" text="Last" translateX="-10.0" />
+                      <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteBook" prefHeight="35.0" prefWidth="100.0" text="Delete" translateX="-10.0" />
+                    </buttons>
+                     <padding>
+                        <Insets top="-15.0" />
+                     </padding>
+                  </ButtonBar>
+                  <VBox prefHeight="56.0" prefWidth="253.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="252.0" text="Fetched records" textAlignment="CENTER" />
+                        <Label fx:id="fetchedRecordLabel" alignment="CENTER" prefHeight="15.0" prefWidth="252.0" text="999999 to 999999 out of 999999" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="-6.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
